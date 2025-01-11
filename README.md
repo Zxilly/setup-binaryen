@@ -1,6 +1,8 @@
 # setup-binaryen
 
-This action sets up Binaryen on the GitHub Actions runner.
+This action sets up Binaryen on the GitHub Actions runner. 
+
+> Originally created by [setup-tinygo](https://github.com/acifani/setup-tinygo)
 
 ## Usage
 
@@ -15,7 +17,7 @@ jobs:
             - name: Setup Binaryen
               uses: Zxilly/setup-binaryen@v1
               with:
-                  version: "117"
+                  version: "121"
             - name: Verify Binaryen installation
               run: wasm-opt --version
 ```
