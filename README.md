@@ -8,16 +8,16 @@ To use this action, add the following step to your GitHub Actions workflow:
 
 ```yaml
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Setup Binaryen
-        uses: Zxilly/setup-binaryen@v1
-        with:
-            version: "117"
-      - name: Verify Binaryen installation
-        run: wasm-opt --version
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Setup Binaryen
+              uses: Zxilly/setup-binaryen@v1
+              with:
+                  version: "117"
+            - name: Verify Binaryen installation
+              run: wasm-opt --version
 ```
 
 Replace `version_number` with the version of Binaryen you want to install.
