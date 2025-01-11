@@ -2,10 +2,10 @@ name: Setup Binaryen
 description: Setup Binaryen on the GitHub Actions runner
 
 inputs:
-    version:
-        description: "Binaryen version to install"
-        required: true
+  version:
+    description: "Binaryen version to install"
+    required: true
 
 runs:
-    using: "node20"
-    main: "dist/index.js"
+  using: "node20"
+  main: "dist/index.js"
