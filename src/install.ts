@@ -28,8 +28,8 @@ async function extract(version: string): Promise<string> {
         const cachedPath = await tool.cacheDir(extractedPath, toolName, version, arch);
 
         return cachedPath;
-    } catch (error: any) {
-        throw new Error(`Failed to download version ${version}: ${error}`);
+    } catch (error) {
+        throw new Error(`Failed to download version ${version}: ${String(error)}`);
     }
 }
 
@@ -50,7 +50,7 @@ async function addToPath(installDir: string, version: string) {
     core.info(`Adding ${installDir}/${binaryen}/bin to PATH`);
     core.addPath(path.join(installDir, binaryen, "bin"));
     const found = await io.findInPath("wasm-opt");
-    core.debug(`Found in path: ${found}`);
+    core.debug(`Found in path: ${found.join(", ")}`);
     const wasmopt = await io.which("wasm-opt");
     printCommand(`${wasmopt} --version`);
 }
