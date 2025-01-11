@@ -3,7 +3,7 @@
   "printWidth": 120,
   "overrides": [
     {
-      "files": ["*.ts", "*.js"],
+      "files": ["*.js", "*.ts"],
       "options": {
         "tabWidth": 4
       }

@@ -1,4 +1,4 @@
-name: Setup Binaryen
+name: Install Binaryen
 description: Setup Binaryen on the GitHub Actions runner
 
 inputs:
@@ -9,3 +9,7 @@ inputs:
 runs:
   using: "node20"
   main: "dist/index.js"
+
+branding:
+  color: "blue"
+  icon: "download"
